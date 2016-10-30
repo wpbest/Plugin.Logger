@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.Logger;
+using Plugin.Logger.Abstractions;
 
 namespace UsingLoggerPlugin.Droid
 {
@@ -20,6 +22,11 @@ namespace UsingLoggerPlugin.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
+            CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
+            string log = CrossLogger.Current.Get();
+
             LoadApplication(new App());
         }
     }

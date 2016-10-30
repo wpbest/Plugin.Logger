@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Plugin.Logger;
+using Plugin.Logger.Abstractions;
 
 namespace UsingLoggerPlugin.UWP
 {
@@ -21,6 +23,9 @@ namespace UsingLoggerPlugin.UWP
         {
             this.InitializeComponent();
 
+            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
+            CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
+            string log = CrossLogger.Current.GetAll();
             LoadApplication(new UsingLoggerPlugin.App());
         }
     }

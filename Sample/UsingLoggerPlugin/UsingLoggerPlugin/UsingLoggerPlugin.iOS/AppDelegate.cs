@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using UIKit;
+using Plugin.Logger;
+using Plugin.Logger.Abstractions;
 
 namespace UsingLoggerPlugin.iOS
 {
@@ -23,6 +24,11 @@ namespace UsingLoggerPlugin.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
+            CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
+            string log = CrossLogger.Current.Get();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

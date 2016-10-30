@@ -12,8 +12,8 @@
 
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-         This plugin provides a CrossLogger class that enables you to easily log any events occurring within your Xamarin.Forms application. It supports Debug, Info, Warning and Error logging levels and you can configure the number of log files being kept and their maximum size. 
-         Works on Android, iOS, UWP WP81, and Windows Store (8.1). 
+         This plugin provides a CrossLogger class that enables you to log any events occurring within your Xamarin.Forms application. It supports Debug, Info, Warning and Error logging levels and you can configure the number of log files being kept and their maximum size. 
+         Works on Android, iOS, Windows UWP Windows Phone 8.1, and Windows Store (8.1). 
 		</description>
 		<summary>To log events in your Xamarin or Xamarin.Forms application</summary>
 		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, uwp, android, xamarin.forms, ios</tags>
@@ -50,25 +50,25 @@
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.pdb" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Logger.Abstractions.pdb" />		
 		
 		<!--dotnet-->
-		<file src="..\Plugin.Logger\bin\Release\Plugin.SimpleLogger.dll" target="lib\dotnet\Plugin.Logger.dll" />
-		<file src="..\Plugin.Logger\bin\Release\Plugin.SimpleLogger.xml" target="lib\dotnet\Plugin.Logger.xml" />
-		<file src="..\Plugin.Logger\bin\Release\Plugin.SimpleLogger.pdb" target="lib\dotnet\Plugin.Logger.pdb" />
-		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.SimpleLogger.Abstractions.dll" target="lib\dotnet\Plugin.Logger.Abstractions.dll" />
-		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.SimpleLogger.Abstractions.xml" target="lib\dotnet\Plugin.Logger.Abstractions.xml" />
-		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.SimpleLogger.Abstractions.pdb" target="lib\dotnet\Plugin.Logger.Abstractions.pdb" />
+		<file src="..\Plugin.Logger\bin\Release\Plugin.Logger.dll" target="lib\dotnet\Plugin.Logger.dll" />
+		<file src="..\Plugin.Logger\bin\Release\Plugin.Logger.xml" target="lib\dotnet\Plugin.Logger.xml" />
+		<file src="..\Plugin.Logger\bin\Release\Plugin.Logger.pdb" target="lib\dotnet\Plugin.Logger.pdb" />
+		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.dll" target="lib\dotnet\Plugin.Logger.Abstractions.dll" />
+		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.xml" target="lib\dotnet\Plugin.Logger.Abstractions.xml" />
+		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.pdb" target="lib\dotnet\Plugin.Logger.Abstractions.pdb" />
 				
 		<!--Win Phone 81-->
-		<file src="..\Plugin.Logger.WindowsPhone81\bin\Release\Plugin.Logger.dll" target="lib\wpa81\Plugin.Logger.dll" />
-		<file src="..\Plugin.Logger.WindowsPhone81\bin\Release\Plugin.Logger.xml" target="lib\wpa81\Plugin.Logger.xml" />
-		<file src="..\Plugin.Logger.WindowsPhone81\bin\Release\Plugin.Logger.pdb" target="lib\wpa81\Plugin.Logger.pdb" />
+		<file src="..\Plugin.Logger.WinPhone\bin\Release\Plugin.Logger.dll" target="lib\wpa81\Plugin.Logger.dll" />
+		<file src="..\Plugin.Logger.WinPhone\bin\Release\Plugin.Logger.xml" target="lib\wpa81\Plugin.Logger.xml" />
+		<file src="..\Plugin.Logger.WinPhone\bin\Release\Plugin.Logger.pdb" target="lib\wpa81\Plugin.Logger.pdb" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.dll" target="lib\wpa81\Plugin.Logger.Abstractions.dll" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.xml" target="lib\wpa81\Plugin.Logger.Abstractions.xml" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.pdb" target="lib\wpa81\Plugin.Logger.Abstractions.pdb" />
 		
 		<!--WinStore-->
-		<file src="..\Plugin.Logger.WindowsStore\bin\Release\Plugin.Logger.dll" target="lib\win8\Plugin.Logger.dll" />
-		<file src="..\Plugin.Logger.WindowsStore\bin\Release\Plugin.Logger.xml" target="lib\win8\Plugin.Logger.xml" />
-		<file src="..\Plugin.Logger.WindowsStore\bin\Release\Plugin.Logger.pdb" target="lib\win8\Plugin.Logger.pdb" />
+		<file src="..\Plugin.Logger.Windows\bin\Release\Plugin.Logger.dll" target="lib\win8\Plugin.Logger.dll" />
+		<file src="..\Plugin.Logger.Windows\bin\Release\Plugin.Logger.xml" target="lib\win8\Plugin.Logger.xml" />
+		<file src="..\Plugin.Logger.Windows\bin\Release\Plugin.Logger.pdb" target="lib\win8\Plugin.Logger.pdb" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.dll" target="lib\win8\Plugin.Logger.Abstractions.dll" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.xml" target="lib\win8\Plugin.Logger.Abstractions.xml" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.pdb" target="lib\win8\Plugin.Logger.Abstractions.pdb" />
@@ -88,9 +88,9 @@
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.xml" target="lib\Xamarin.iOS10\Plugin.Logger.Abstractions.xml" />
 
 		<!--uap-->
-		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.dll" target="lib\UAP10\Plugin.SimpleLogger.dll" />
-		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.xml" target="lib\UAP10\Plugin.SimpleLogger.xml" />
-		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.pdb" target="lib\UAP10\Plugin.SimpleLogger.pdb" />
+		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.dll" target="lib\UAP10\Plugin.Logger.dll" />
+		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.xml" target="lib\UAP10\Plugin.Logger.xml" />
+		<file src="..\Plugin.Logger.UWP\bin\Release\Plugin.Logger.pdb" target="lib\UAP10\Plugin.Logger.pdb" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.dll" target="lib\UAP10\Plugin.Logger.Abstractions.dll" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.xml" target="lib\UAP10\Plugin.Logger.Abstractions.xml" />
 		<file src="..\Plugin.Logger.Abstractions\bin\Release\Plugin.Logger.Abstractions.pdb" target="lib\UAP10\Plugin.Logger.Abstractions.pdb" />
