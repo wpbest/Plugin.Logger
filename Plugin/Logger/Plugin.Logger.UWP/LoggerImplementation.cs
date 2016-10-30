@@ -65,7 +65,7 @@ namespace Plugin.Logger
             string logFileName = GetLogFileName();
             string localStoragePath = GetLocalStoragePath();
             string logFilePath = Path.Combine(localStoragePath, logFileName);
-            log = File.ReadAllText(logFilePath);
+            if (File.Exists(logFilePath)) log = File.ReadAllText(logFilePath);
             return log;
         }
     }
