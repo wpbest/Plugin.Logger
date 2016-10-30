@@ -60,5 +60,9 @@ namespace Plugin.Logger.Abstractions
         /// </summary>
         /// <returns></returns>
         string GetAll();
+        /// <summary>
+        /// Purge log
+        /// </summary>
+        void Purge();
     }
 }

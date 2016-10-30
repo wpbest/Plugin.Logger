@@ -70,6 +70,7 @@ namespace Plugin.Logger.Abstractions
             {
                 formattedMessage = String.Format("{0} {1} {2} {3} EXCEPTION: {4} STACK TRACE: {5}", logLevel.ToString(), DateTime.UtcNow, tag, message, exception.Message, exception.StackTrace.ToString());
             }
+            formattedMessage += Environment.NewLine;
             return formattedMessage;
         }
         /// <summary>
@@ -117,6 +118,12 @@ namespace Plugin.Logger.Abstractions
             string log = "";
             return log;
         }
-
+        /// <summary>
+        /// Purge log
+        /// </summary>
+        public virtual void Purge()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

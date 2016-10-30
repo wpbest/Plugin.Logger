@@ -87,5 +87,15 @@ namespace Plugin.Logger
             if (File.Exists(logFilePath)) log = File.ReadAllText(logFilePath);
             return log;
         }
+        /// <summary>
+        /// Purge log
+        /// </summary>
+        public override void Purge()
+        {
+            string logFileName = GetLogFileName();
+            string localStoragePath = GetLocalStoragePath();
+            string logFilePath = Path.Combine(localStoragePath, logFileName);
+            if (File.Exists(logFilePath)) File.Delete(logFilePath);
+        }
     }
 }

@@ -40,17 +40,16 @@ namespace Plugin.Logger
         /// <param name="tag"></param>
         /// <param name="message"></param>
         /// <param name="exception"></param>
-        public override async void Log(LogLevel logLevel = LogLevel.Warn, string tag = "tag", string message = "message", Exception exception = null)
+        public override void Log(LogLevel logLevel = LogLevel.Warn, string tag = "tag", string message = "message", Exception exception = null)
         {
             LogLevel currentLogLevel = GetLogLevel();
             if (logLevel >= currentLogLevel)
             {
                 string logFileName = GetLogFileName();
                 StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-                StorageFile logFile = await localFolder.GetFileAsync(logFileName);
+                StorageFile logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
                 string formattedMessage = FormatMessage(logLevel, tag, message, exception);
-                IEnumerable<string> lines = new List<string>() { formattedMessage };
-                await FileIO.AppendLinesAsync(logFile, lines);
+                FileIO.AppendTextAsync(logFile, formattedMessage).GetAwaiter().GetResult();
                 bool logToConsole = GetLogToConsole();
                 if (logToConsole)
                 {
@@ -66,10 +65,21 @@ namespace Plugin.Logger
         {
             string logFileName = GetLogFileName();
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            //StorageFile logFile = await localFolder.GetFileAsync(logFileName);
-            //return await FileIO.ReadTextAsync(logFile);
-            string log = "";
+            StorageFile logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+            string log = FileIO.ReadTextAsync(logFile).GetAwaiter().GetResult();
             return log;
+        }
+        /// <summary>
+        /// Purge log
+        /// </summary>
+        public override void Purge()
+        {
+            string logFileName = GetLogFileName();
+            StorageFile storagefile = ApplicationData.Current.LocalFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+            if (storagefile != null)
+            {
+                storagefile.DeleteAsync().GetAwaiter().GetResult();
+            }
         }
     }
 }
