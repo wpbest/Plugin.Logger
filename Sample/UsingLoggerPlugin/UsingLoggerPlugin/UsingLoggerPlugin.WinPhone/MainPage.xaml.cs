@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Plugin.Logger;
+using Plugin.Logger.Abstractions;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,6 +29,10 @@ namespace UsingLoggerPlugin.WinPhone
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
+            CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
+            string log = CrossLogger.Current.GetAll();
 
             LoadApplication(new UsingLoggerPlugin.App());
         }

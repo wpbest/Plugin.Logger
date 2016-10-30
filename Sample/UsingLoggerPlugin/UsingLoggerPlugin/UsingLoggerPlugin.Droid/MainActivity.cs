@@ -25,7 +25,7 @@ namespace UsingLoggerPlugin.Droid
 
             CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
             CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
-            string log = CrossLogger.Current.Get();
+            string log = CrossLogger.Current.GetAll();
 
             LoadApplication(new App());
         }
