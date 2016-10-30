@@ -64,11 +64,11 @@ namespace Plugin.Logger.Abstractions
             string formattedMessage = "";
             if (exception == null)
             {
-                formattedMessage = String.Format("{0} {1} {2} {3} {4}", logLevel, DateTime.UtcNow, tag, message);
+                formattedMessage = String.Format("{0} {1} {2} {3}", logLevel, DateTime.UtcNow, tag, message);
             }
             else
             {
-                formattedMessage = String.Format("{0} {1} {2} {3} {4} EXCEPTION: {5} STACK TRACE: {6}", logLevel, DateTime.UtcNow, tag, message, exception.Message, exception.StackTrace.ToString());
+                formattedMessage = String.Format("{0} {1} {2} {3} EXCEPTION: {4} STACK TRACE: {5}", logLevel.ToString(), DateTime.UtcNow, tag, message, exception.Message, exception.StackTrace.ToString());
             }
             return formattedMessage;
         }

@@ -2031,7 +2031,7 @@
           }
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -4165,7 +4165,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -6338,7 +6338,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -8481,7 +8481,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -10663,7 +10663,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -12806,7 +12806,7 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -14988,7 +14988,7 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "wpbest.Plugin.Logger/1.0.1": {
+      "wpbest.Plugin.Logger/1.0.2": {
         "compile": {
           "lib/UAP10/Plugin.Logger.Abstractions.dll": {},
           "lib/UAP10/Plugin.Logger.dll": {}
@@ -21181,10 +21181,10 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
-    "wpbest.Plugin.Logger/1.0.1": {
-      "sha512": "Q/EMXKnuvxRGaTXoV+x7nveqgp85uvWZEU9gXtfuagqoFdhZfc6F7sP4jMN8kTw1wV9sIIqU9i92g9Gdm9Dc6g==",
+    "wpbest.Plugin.Logger/1.0.2": {
+      "sha512": "Bo99uF2ALdiBgVRu4z7AEFekTf2Kw2FqonaXQSe6nOI+ayYtJ3V3JZ21z5bb+yGFNDhczTivVpvhkyxQkVMrug==",
       "type": "package",
-      "path": "wpbest.Plugin.Logger/1.0.1",
+      "path": "wpbest.Plugin.Logger/1.0.2",
       "files": [
         "lib/MonoAndroid10/Plugin.Logger.Abstractions.dll",
         "lib/MonoAndroid10/Plugin.Logger.Abstractions.xml",
@@ -21214,7 +21214,7 @@
         "lib/wpa81/Plugin.Logger.Abstractions.xml",
         "lib/wpa81/Plugin.Logger.dll",
         "lib/wpa81/Plugin.Logger.xml",
-        "wpbest.Plugin.Logger.1.0.1.nupkg.sha512",
+        "wpbest.Plugin.Logger.1.0.2.nupkg.sha512",
         "wpbest.Plugin.Logger.nuspec"
       ]
     },
@@ -21428,7 +21428,7 @@
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
       "Xamarin.Forms >= 2.3.2.127",
-      "wpbest.Plugin.Logger >= 1.0.1"
+      "wpbest.Plugin.Logger >= 1.0.2"
     ],
     "UAP,Version=v10.0": []
   }
