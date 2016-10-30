@@ -25,7 +25,7 @@ namespace UsingLoggerPlugin.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Warn, true);
+            CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Debug, true);
             CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
             string log = CrossLogger.Current.GetAll();
 
