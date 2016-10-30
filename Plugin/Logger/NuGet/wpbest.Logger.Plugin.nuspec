@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
 		<id>wpbest.Plugin.Logger</id>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 		<title>Logger Plugin for Xamarin.Forms</title>
 		<authors>wpbest</authors>
 		<owners>wpbest</owners>
-    <licenseUrl>https://github.com/wpbest/Plugin.Logger/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/wpbest/Plugin.Logger</projectUrl>      
+        <licenseUrl>https://github.com/wpbest/Plugin.Logger/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/wpbest/Plugin.Logger</projectUrl>      
 		<iconUrl>https://github.com/wpbest/Plugin.Logger/blob/master/Plugin/Logger/NuGet/Logger.png</iconUrl>
-
+        <copyright>Copyright 2016 wpbest</copyright>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
          This plugin provides a CrossLogger class that enables you to log any events occurring within your Xamarin.Forms application. It supports Debug, Info, Warn, Error, and Fatal. The number of log files being kept and their maximum size are configurable. 
@@ -17,6 +17,7 @@
 		</description>
 		<summary>To log events in your Xamarin or Xamarin.Forms application</summary>
 		<tags>xamarin, pcl, xam.pcl, plugin, plugin for xamarin, windows phone, uwp, android, xamarin.forms, ios</tags>
+		<releaseNotes>1.0.1-Initial release, 1.0.2-Fix Check log file exists before trying to read it</releaseNotes>
 		<dependencies>
 			<group targetFramework="net">
 			</group>
