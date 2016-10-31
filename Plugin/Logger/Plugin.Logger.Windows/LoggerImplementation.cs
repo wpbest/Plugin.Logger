@@ -45,11 +45,20 @@ namespace Plugin.Logger
             LogLevel currentLogLevel = GetLogLevel();
             if (logLevel >= currentLogLevel)
             {
+                string formattedMessage = FormatMessage(logLevel, tag, message, exception);
                 string logFileName = GetLogFileName();
                 StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-                StorageFile logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
-                string formattedMessage = FormatMessage(logLevel, tag, message, exception);
-                FileIO.AppendTextAsync(logFile, formattedMessage).GetAwaiter().GetResult();
+                var storageItem = localFolder.TryGetItemAsync(logFileName).GetAwaiter().GetResult();
+                if (storageItem == null)
+                {
+                    StorageFile newFile = localFolder.CreateFileAsync(logFileName).GetAwaiter().GetResult();
+                    FileIO.WriteTextAsync(newFile, formattedMessage).GetAwaiter().GetResult();
+                }
+                else
+                {
+                    StorageFile logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+                    FileIO.AppendTextAsync(logFile, formattedMessage).GetAwaiter().GetResult();
+                }
                 bool logToConsole = GetLogToConsole();
                 if (logToConsole)
                 {
@@ -75,9 +84,11 @@ namespace Plugin.Logger
         public override void Purge()
         {
             string logFileName = GetLogFileName();
-            StorageFile storagefile = ApplicationData.Current.LocalFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
-            if (storagefile != null)
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            var storageItem = localFolder.TryGetItemAsync(logFileName).GetAwaiter().GetResult();
+            if (storageItem == null)
             {
+                StorageFile storagefile = ApplicationData.Current.LocalFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
                 storagefile.DeleteAsync().GetAwaiter().GetResult();
             }
         }

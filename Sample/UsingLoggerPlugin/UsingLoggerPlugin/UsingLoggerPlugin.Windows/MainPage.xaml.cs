@@ -14,11 +14,13 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Plugin.Logger;
 using Plugin.Logger.Abstractions;
+using Windows.Storage;
 
 namespace UsingLoggerPlugin.Windows
 {
     public sealed partial class MainPage
     {
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -26,6 +28,7 @@ namespace UsingLoggerPlugin.Windows
             CrossLogger.Current.Configure("UsingLoggerPlugin.log", 3, 100, LogLevel.Debug, true);
             CrossLogger.Current.Log(LogLevel.Info, "UsingLoggerPlugin", "Log Started");
             string log = CrossLogger.Current.GetAll();
+            CrossLogger.Current.Purge();
 
             LoadApplication(new UsingLoggerPlugin.App());
         }

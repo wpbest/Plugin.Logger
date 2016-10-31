@@ -47,9 +47,27 @@ namespace Plugin.Logger
             {
                 string logFileName = GetLogFileName();
                 StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-                StorageFile logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+                StorageFile logFile = null;
+                bool logFileFound = true;
+                try
+                {
+                    logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+                }
+                catch (FileNotFoundException)
+                {
+                    logFileFound = false;
+                }
+                
                 string formattedMessage = FormatMessage(logLevel, tag, message, exception);
-                FileIO.AppendTextAsync(logFile, formattedMessage).GetAwaiter().GetResult();
+                if (logFileFound)
+                {
+                    FileIO.AppendTextAsync(logFile, formattedMessage).GetAwaiter().GetResult();
+                }
+                else
+                {
+                    StorageFile newFile = localFolder.CreateFileAsync(logFileName).GetAwaiter().GetResult();
+                    FileIO.WriteTextAsync(newFile, formattedMessage).GetAwaiter().GetResult();
+                }
                 bool logToConsole = GetLogToConsole();
                 if (logToConsole)
                 {

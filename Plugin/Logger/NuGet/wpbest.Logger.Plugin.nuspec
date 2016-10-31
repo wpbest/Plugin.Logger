@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.8.3">
 		<id>wpbest.Plugin.Logger</id>
-		<version>1.0.3</version>
+		<version>1.0.7</version>
 		<title>Logger Plugin for Xamarin.Forms</title>
 		<authors>wpbest</authors>
 		<owners>wpbest</owners>
@@ -17,7 +17,10 @@
 		</description>
 		<summary>To log events in your Xamarin or Xamarin.Forms application</summary>
 		<tags>xamarin.forms, pcl, plugin, windows phone, uwp, android, xamarin.forms, ios</tags>
-		<releaseNotes>1.0.1-Initial release, 1.0.2-Fix Check log file exists before trying to read it, 1.0.3 Fixed FormatMessage bug</releaseNotes>
+		<releaseNotes>
+		 1.0.1-Initial release; 1.0.2-Fix Check log file exists before trying to read it; 1.0.3 Fixed FormatMessage bug; 1.0.4-Added Purge method, Implemented remaining Windows 8.1 and WinPhone 8.1 methods;
+		 1.0.5/6-Fixed Write after create file Windows 8.1 and WinPhone 8.1
+		 </releaseNotes>
 		<dependencies>
 			<group targetFramework="net">
 			</group>

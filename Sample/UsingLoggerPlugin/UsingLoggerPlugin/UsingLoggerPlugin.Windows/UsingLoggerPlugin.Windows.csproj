@@ -143,11 +143,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\wpbest.Plugin.Logger.1.0.3\lib\win8\Plugin.Logger.dll</HintPath>
+      <HintPath>..\..\packages\wpbest.Plugin.Logger.1.0.7\lib\win8\Plugin.Logger.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Plugin.Logger.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\wpbest.Plugin.Logger.1.0.3\lib\win8\Plugin.Logger.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\wpbest.Plugin.Logger.1.0.7\lib\win8\Plugin.Logger.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
