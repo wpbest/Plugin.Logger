@@ -19,7 +19,7 @@
 		<tags>xamarin.forms, pcl, plugin, windows phone, uwp, android, xamarin.forms, ios</tags>
 		<releaseNotes>
 		 1.0.1-Initial release; 1.0.2-Fix Check log file exists before trying to read it; 1.0.3 Fixed FormatMessage bug; 1.0.4-Added Purge method, Implemented remaining Windows 8.1 and WinPhone 8.1 methods;
-		 1.0.5/6-Fixed Write after create file Windows 8.1 and WinPhone 8.1
+		 1.0.5/6/7-Fixed Write after create file Windows 8.1 and WinPhone 8.1 (custom not file exist)
 		 </releaseNotes>
 		<dependencies>
 			<group targetFramework="net">
