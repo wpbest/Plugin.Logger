@@ -71,7 +71,7 @@ namespace Plugin.Logger
                 bool logToConsole = GetLogToConsole();
                 if (logToConsole)
                 {
-                    Debug.WriteLine(formattedMessage);
+                    System.Diagnostics.Debug.WriteLine(formattedMessage);
                 }
             }
         }
@@ -92,11 +92,21 @@ namespace Plugin.Logger
         /// </summary>
         public override void Purge()
         {
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            StorageFile logFile = null;
+            bool logFileFound = true;
             string logFileName = GetLogFileName();
-            StorageFile storagefile = ApplicationData.Current.LocalFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
-            if (storagefile != null)
+            try
             {
-                storagefile.DeleteAsync().GetAwaiter().GetResult();
+                logFile = localFolder.GetFileAsync(logFileName).GetAwaiter().GetResult();
+            }
+            catch (FileNotFoundException)
+            {
+                logFileFound = false;
+            }
+            if (logFileFound)
+            {
+                logFile.DeleteAsync().GetAwaiter().GetResult();
             }
         }
     }

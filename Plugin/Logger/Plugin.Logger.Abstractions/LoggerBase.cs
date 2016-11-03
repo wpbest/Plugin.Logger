@@ -110,6 +110,56 @@ namespace Plugin.Logger.Abstractions
             throw new NotImplementedException();
         }
         /// <summary>
+        /// Log Debug
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public virtual void Debug(string tag = "tag", string message = "message", Exception exception = null)
+        {
+            Log(LogLevel.Debug, tag, message, exception);
+        }
+        /// <summary>
+        /// Log Info
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public virtual void Info(string tag = "tag", string message = "message", Exception exception = null)
+        {
+            Log(LogLevel.Info, tag, message, exception);
+        }
+        /// <summary>
+        /// Log Warn
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public virtual void Warn(string tag = "tag", string message = "message", Exception exception = null)
+        {
+            Log(LogLevel.Warn, tag, message, exception);
+        }
+        /// <summary>
+        /// Log Error
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public virtual void Error(string tag = "tag", string message = "message", Exception exception = null)
+        {
+            Log(LogLevel.Error, tag, message, exception);
+        }
+        /// <summary>
+        /// Log Fatal
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        public virtual void Fatal(string tag = "tag", string message = "message", Exception exception = null)
+        {
+            Log(LogLevel.Fatal, tag, message, exception);
+        }
+        /// <summary>
         /// Get local storage path
         /// </summary>
         /// <returns></returns>

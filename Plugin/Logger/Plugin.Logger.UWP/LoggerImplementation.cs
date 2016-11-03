@@ -51,7 +51,7 @@ namespace Plugin.Logger
                 bool logToConsole = GetLogToConsole();
                 if (logToConsole)
                 {
-                    Debug.WriteLine(formattedMessage);
+                    System.Diagnostics.Debug.WriteLine(formattedMessage);
                 }
             }
         }

@@ -51,6 +51,41 @@ namespace Plugin.Logger.Abstractions
         /// <param name="exception"></param>
         void Log(LogLevel logLevel = LogLevel.Warn, string tag = "tag", string message = "message", Exception exception = null);
         /// <summary>
+        /// Log Debug
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        void Debug(string tag = "tag", string message = "message", Exception exception = null);
+        /// <summary>
+        /// Log Info
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        void Info(string tag = "tag", string message = "message", Exception exception = null);
+        /// <summary>
+        /// Log Warn
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        void Warn(string tag = "tag", string message = "message", Exception exception = null);
+        /// <summary>
+        /// Log Error
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        void Error(string tag = "tag", string message = "message", Exception exception = null);
+        /// <summary>
+        /// Log Fatal
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="message"></param>
+        /// <param name="exception"></param>
+        void Fatal(string tag = "tag", string message = "message", Exception exception = null);
+        /// <summary>
         /// Get the path to local storage
         /// </summary>
         /// <returns></returns>
